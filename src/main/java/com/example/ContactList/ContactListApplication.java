@@ -18,7 +18,8 @@ public class ContactListApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/getContacts").allowedOrigins("http://localhost:8080","https://contact-list.herokuapp.com/api/contactses");
+				registry.addMapping("/getContacts").allowedOrigins("http://localhost:8080","https://contact-list.herokuapp.com/api/contactses","https://lauritorma-homepage.onrender.com");
+				registry.addMapping("https://contact-list.herokuapp.com/api/contactses").allowedOrigins("http://localhost:8080\",\"https://contact-list.herokuapp.com/api/contactses\",\"https://lauritorma-homepage.onrender.com");
 			}
 		};
 	}
