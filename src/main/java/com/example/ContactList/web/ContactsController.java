@@ -17,7 +17,7 @@ public class ContactsController {
 	@Autowired
 	private ContactsRepository crepository;
 	
-	@CrossOrigin(origins = "http://localhost:8080")
+	@CrossOrigin(origins = "https://contact-list.herokuapp.com/api/contactses")
 	@GetMapping(value= {"/getContacts"})
 	public @ResponseBody List<Contacts> getContacts() {
 		return (List<Contacts>) crepository.findAll();
